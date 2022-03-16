@@ -2,8 +2,11 @@ package com.ejemplo.springboot.di.app.models.domain;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
+import org.springframework.web.context.annotation.RequestScope;
 
 @Component
+//se crea en cada peticion http
+@RequestScope
 public class Cliente {
 
 	@Value("${cliente.nombre}")
